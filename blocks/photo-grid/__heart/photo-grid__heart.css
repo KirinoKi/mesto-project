@@ -1,0 +1,22 @@
+.photo-grid__heart {
+    min-width: 22px;
+    min-height: 19px;
+    background-image: url('/images/Vector-3.svg');
+    border: none;
+    background-position: center;
+    background-size: cover;
+    background-color: #ffffff;
+    padding: 0;
+    margin: 0;
+}
+
+.photo-grid__heart:hover {
+    opacity: 0.5;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border: none;
+}
+
+.photo-grid__heart:active {
+    background-image: url('https://i.postimg.cc/63bs4MfV/heart-black.jpg');
+}

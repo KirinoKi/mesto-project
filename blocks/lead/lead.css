@@ -1,0 +1,19 @@
+.lead {
+    display: flex;
+    flex-direction: row;
+    background-color: #000000;
+    margin-top: 36px;
+    color: #ffffff;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    max-width: 880px;
+}
+
+@media (max-width: 1080px) {
+    .lead {
+        flex-direction: column;
+        margin-bottom: 36px;
+        margin-top: 42px;
+    }
+}

@@ -1,0 +1,21 @@
+.lead__button {
+    display: flex;
+    width: 150px;
+    height: 50px;
+    outline: solid white 1px;
+    background-color: black;
+    background-image: url('/images/add-plus-svgrepo-com.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 2px;
+    border: black solid 15px;
+    padding: auto 0;
+    margin-right: 6px;
+}
+  
+@media (max-width: 1080px) {
+    .lead__button {
+        width: 282px;
+    }
+}
