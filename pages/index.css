@@ -15,10 +15,9 @@
 @import url(../blocks/lead/__subtitle/lead__subtitle.css);
 @import url(../blocks/lead/__pencil/lead__pencil.css);
 @import url(../blocks/lead/__image/lead__image.css);
-@import url(../blocks/lead/__botton/lead__botton.css);
+@import url(../blocks/lead/__button/lead__button.css);
 @import url(../blocks/lead/__wrapper-titles/lead__wrapper-titles.css);
 @import url(../blocks/photo-grid/photo-grid.css);
-@import url(../blocks/photo-grid/__urn/photo-grid__urn.css);
 @import url(../blocks/photo-grid/__name/photo-grid__name.css);
 @import url(../blocks/photo-grid/__name-title/photo-grid__name-title.css);
 @import url(../blocks/photo-grid/__item/photo-grid.__item.css);
@@ -31,3 +30,6 @@
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
 @import url(../blocks/opacity/opacity.css);
+
+/*Раскоментируйте правило, чтобы открты попап*/
+/*@import url(../blocks/popup/_opened/popup_opened.css);*/

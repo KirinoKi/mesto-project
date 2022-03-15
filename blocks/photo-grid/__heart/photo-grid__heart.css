@@ -1,7 +1,7 @@
 .photo-grid__heart {
     min-width: 22px;
     min-height: 19px;
-    background-image: url('/images/Vector-3.svg');
+    background-image: url(../../../images/Vector-3.svg);
     border: none;
     background-position: center;
     background-size: cover;
