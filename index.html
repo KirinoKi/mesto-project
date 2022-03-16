@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./vendor/normalize.css">
   <link rel="stylesheet" href="./pages/index.css">
 
   <title>Место</title>
@@ -17,58 +16,58 @@
   <main class="content">
     <section class="lead">
       <div class="lead__titles">
-        <img class="lead__image" src="./images/image-4.jpg" alt="Фото Жака" />
+        <img class="lead__image" src="./images/image-4.jpg" alt="Ваш аватар" />
         <div class="lead__wrapper-titles">
           <div class="lead__wrapper-title">
             <h1 class="lead__title">Жак-Ив Кусто</h1>
-            <button aria-label="Внести изменения в форму" class="lead__pencil opacity"></button>
+            <button aria-label="Внести изменения в форму" type='button' class="lead__pencil opacity"></button>
           </div>
           <p class="lead__subtitle margin">Исследователь океана</p>
         </div>
       </div>
-      <button aria-label="Добавить карточку" class="lead__button opacity"></button>
+      <button aria-label="Добавить карточку" type='button' class="lead__button opacity"></button>
     </section>
     <section class="photo-grid" aria-label="Фото красивых мест">
       <div class="photo-grid__card">
         <img src="./images/kirill-pershin-1088404-unsplash-1.jpg" alt="Карачаевск" class="photo-grid__item" />
         <div class="photo-grid__name">
-          <p class="photo-grid__name-title">Карачаевск</p>
-          <button class="photo-grid__heart"></button>
+          <h2 class="photo-grid__name-title">Карачаевск</h2>
+          <button class="photo-grid__heart" type='button'></button>
         </div>
       </div>
       <div class="photo-grid__card">
         <img src="./images/1000-b5ddf57da08e845e41ea857fef8e617b.jpg" alt="Владимир" class="photo-grid__item" />
         <div class="photo-grid__name">
-          <p class="photo-grid__name-title">Владимир</p>
-          <button class="photo-grid__heart"></button>
+          <h2 class="photo-grid__name-title">Владимир</h2>
+          <button class="photo-grid__heart" type='button'></button>
         </div>
       </div>
       <div class="photo-grid__card">
         <img src="./images/belg.jpg" alt="Белгород" class="photo-grid__item" />
         <div class="photo-grid__name">
-          <p class="photo-grid__name-title">Белгород</p>
-          <button class="photo-grid__heart"></button>
+          <h2 class="photo-grid__name-title">Белгород</h2>
+          <button class="photo-grid__heart" type='button'></button>
         </div>
       </div>
       <div class="photo-grid__card">
         <img src="./images/Strannoe-mesto-Kamtchatka.jpg" alt="Петропавловск-Камчатский" class="photo-grid__item" />
         <div class="photo-grid__name">
-          <p class="photo-grid__name-title">Петропавловск-Камчатский</p>
-          <button class="photo-grid__heart"></button>
+          <h2 class="photo-grid__name-title">Петропавловск-Камчатский</h2>
+          <button class="photo-grid__heart" type='button'></button>
         </div>
       </div>
       <div class="photo-grid__card">
         <img src="./images/voyager-en-russie-1-1000x1000_c.jpg" alt="Москва" class="photo-grid__item" />
         <div class="photo-grid__name">
-          <p class="photo-grid__name-title">Москва</p>
-          <button class="photo-grid__heart"></button>
+          <h2 class="photo-grid__name-title">Москва</h2>
+          <button class="photo-grid__heart" type='button'></button>
         </div>
       </div>
       <div class="photo-grid__card">
         <img src="./images/kirill-pershin-1088404-unsplash-1.jpg" alt="Карачаевск" class="photo-grid__item" />
         <div class="photo-grid__name">
-          <p class="photo-grid__name-title">Карачаевск</p>
-          <button class="photo-grid__heart"></button>
+          <h2 class="photo-grid__name-title">Карачаевск</h2>
+          <button class="photo-grid__heart" type='button'></button>
         </div>
       </div>
     </section>
@@ -78,11 +77,11 @@
   </footer>
   <div class="popup popup_opened">
     <div class="popup__container">
-      <form action="#" class="popup__inputs">
-        <button aria-label="Закрыть попап" class="popup__close-cross opacity"></button>
+      <form action="#" class="popup__inputs" name="Form">
+        <button aria-label="Закрыть попап" type='button' class="popup__close-cross opacity"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
-        <input name='name' type="text" placeholder="Имя" value="" class="popup__input-text">
-        <input name='subname' type="text" placeholder="О себе" value="" class="popup__input-text">
+        <input name="name" id="username" type="text" placeholder="Имя" value="" class="popup__input-text">
+        <input name="subname" id="subname" type="text" placeholder="О себе" value="" class="popup__input-text">
         <button aria-label="Сохранить изменения в форме" type="submit" class="popup__submit">
           Сохранить
         </button>

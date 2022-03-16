@@ -1,23 +1,23 @@
 .lead__wrapper-titles {
-  padding-left: 30px;
-  margin-top: 25px;
+    padding-left: 30px;
+    margin-top: 25px;
 }
 
 @media (max-width: 910px) {
-  .lead__wrapper-titles {
-    padding-left: 45px;
-  }
+    .lead__wrapper-titles {
+      padding-left: 45px;
+    }
 }
 
 @media (max-width: 768px) {
-  .lead__wrapper-titles {
-    padding-left: 35px;
-  }
+    .lead__wrapper-titles {
+      padding-left: 35px;
+    }
 }
 
 @media (max-width: 786px) {
-  .lead__wrapper-titles {
-    padding: 0;
-    margin: 26px 0 0 27px;
-  }
+    .lead__wrapper-titles {
+      padding: 0;
+      margin: 26px 0 0 27px;
+    }
 }
