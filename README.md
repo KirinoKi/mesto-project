@@ -11,7 +11,7 @@
 *Используемые технологии*
 HTML, CSS
 
-ССЫЛКА НА СТРАНИЦУ: https://github.com/KirinoKi/mesto-project.git
+Ссылка на страницу: https://kirinoki.github.io/mesto-project/index.html
 
 Проект создан в Visual Studio Code
 2022
