@@ -2,7 +2,7 @@
     display: flex;
     width: 150px;
     height: 50px;
-    outline: solid white 1px;
+    outline: solid white 2px;
     background-color: transparent;
     background-image: url(../../../images/add-plus-svgrepo-com.svg);
     background-size: 25px;
