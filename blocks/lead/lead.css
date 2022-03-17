@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 50px;
-    max-width: 880px;
+    max-width: 900px;
 }
 
 @media (max-width: 1080px) {

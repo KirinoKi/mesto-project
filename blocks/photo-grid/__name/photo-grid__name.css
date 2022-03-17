@@ -3,9 +3,8 @@
     justify-content: space-between;
     max-width: 100%;
     background-color: #ffffff;
-    padding-left: 21px;
-    padding-right: 20px;
+    margin-left: 21px;
+    margin-right: 15px;
     align-items: center;
-    border-radius: 0px 0px 10px 10px;
-    
+    border-radius: 0px 0px 10px 10px;  
 }
