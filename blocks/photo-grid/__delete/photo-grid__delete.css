@@ -1,0 +1,20 @@
+.photo-grid__delete {
+  min-width: 20px;
+  min-height: 20px;
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  background-image: url(../../../images/seo-social-web-network-internet_262_icon-icons.com_61518.svg);
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.photo-grid__delete:hover {
+    opacity: 0.5;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border: none;
+}

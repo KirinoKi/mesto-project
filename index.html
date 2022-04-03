@@ -20,72 +20,62 @@
         <div class="lead__wrapper-titles">
           <div class="lead__wrapper-title">
             <h1 class="lead__title">Жак-Ив Кусто</h1>
-            <button aria-label="Внести изменения в форму" type='button' class="lead__pencil opacity"></button>
+            <button aria-label="Внести изменения в форму" type='button'
+              class="lead__pencil opacity profile__open-popup"></button>
           </div>
-          <p class="lead__subtitle margin">Исследователь океана</p>
+          <p class="lead__subtitle">Исследователь океана</p>
         </div>
       </div>
       <button aria-label="Добавить карточку" type='button' class="lead__button opacity"></button>
     </section>
     <section class="photo-grid" aria-label="Фото красивых мест">
-      <div class="photo-grid__card">
-        <img src="./images/kirill-pershin-1088404-unsplash-1.jpg" alt="Карачаевск" class="photo-grid__item" />
-        <div class="photo-grid__name">
-          <h2 class="photo-grid__name-title">Карачаевск</h2>
-          <button class="photo-grid__heart" type='button'></button>
-        </div>
-      </div>
-      <div class="photo-grid__card">
-        <img src="./images/1000-b5ddf57da08e845e41ea857fef8e617b.jpg" alt="Владимир" class="photo-grid__item" />
-        <div class="photo-grid__name">
-          <h2 class="photo-grid__name-title">Владимир</h2>
-          <button class="photo-grid__heart" type='button'></button>
-        </div>
-      </div>
-      <div class="photo-grid__card">
-        <img src="./images/belg.jpg" alt="Белгород" class="photo-grid__item" />
-        <div class="photo-grid__name">
-          <h2 class="photo-grid__name-title">Белгород</h2>
-          <button class="photo-grid__heart" type='button'></button>
-        </div>
-      </div>
-      <div class="photo-grid__card">
-        <img src="./images/Strannoe-mesto-Kamtchatka.jpg" alt="Петропавловск-Камчатский" class="photo-grid__item" />
-        <div class="photo-grid__name">
-          <h2 class="photo-grid__name-title">Петропавловск-Камчатский</h2>
-          <button class="photo-grid__heart" type='button'></button>
-        </div>
-      </div>
-      <div class="photo-grid__card">
-        <img src="./images/voyager-en-russie-1-1000x1000_c.jpg" alt="Москва" class="photo-grid__item" />
-        <div class="photo-grid__name">
-          <h2 class="photo-grid__name-title">Москва</h2>
-          <button class="photo-grid__heart" type='button'></button>
-        </div>
-      </div>
-      <div class="photo-grid__card">
-        <img src="./images/kirill-pershin-1088404-unsplash-1.jpg" alt="Карачаевск" class="photo-grid__item" />
-        <div class="photo-grid__name">
-          <h2 class="photo-grid__name-title">Карачаевск</h2>
-          <button class="photo-grid__heart" type='button'></button>
-        </div>
-      </div>
     </section>
   </main>
   <footer class="footer">
     <p class="footer__copyright">&copy; 2022 Бурмакина Екатерина</p>
   </footer>
-  <div class="popup popup_opened">
+  <div class="popup popup__edit">
     <div class="popup__container">
-      <form action="#" class="popup__inputs" name="Form">
-        <button aria-label="Закрыть попап" type='button' class="popup__close-cross opacity"></button>
-        <h2 class="popup__title">Редактировать профиль</h2>
-        <input name="name" id="username" type="text" placeholder="Имя" value="" class="popup__input-text">
-        <input name="subname" id="subname" type="text" placeholder="О себе" value="" class="popup__input-text">
-        <button aria-label="Сохранить изменения в форме" type="submit" class="popup__submit">
-          Сохранить
-        </button>
+      <button class="popup__close-cross"></button>
+      <h3 class="popup__title">Редактировать профиль</h3>
+      <form action="#" class="popup__inputs popup__profile" name="editPopup">
+        <input type="text" class="popup__input-text popup__input-name" name="userName" placeholder="Ваше имя">
+        <input type="text" class="popup__input-text popup__input-subname" name="userOccupation"
+          placeholder="Ваш род деятельности">
+        <button type="submit" class="popup__submit">Сохранить</button>
       </form>
     </div>
   </div>
+  <div class="popup popup__add">
+    <div class="popup__container">
+      <button class="popup__close-cross"></button>
+      <h3 class="popup__title">Новое место</h3>
+      <form action="#" class="popup__inputs popup__photo-grid" name="editPopup">
+        <input type="text" class="popup__input-text popup__input-title" name="userName" placeholder="Название">
+        <input type="text" class="popup__input-text popup__input-link" name="userOccupation"
+          placeholder="Ссылка на картинку">
+        <button type="submit" class="popup__submit popup__submit-place">Создать</button>
+      </form>
+    </div>
+  </div>
+  <div class="popup popup__card">
+    <div class="popup__content">
+      <img src="" alt="" class="popup__image">
+      <button class="popup__close-cross popup__close-card" type="button" aria-label="Закрыть пост"></button>
+      <h3 class="popup__caption"></h3>
+    </div>
+  </div>
+  <template id="template">
+    <article class="photo-grid__card">
+      <div class="photo-grid__image">
+        <img src="" alt="" class="photo-grid__item">
+        <button class="photo-grid__delete" type="button" aria-label="Удалить пост"></button>
+      </div>
+      <div class="photo-grid__name">
+        <h3 class="photo-grid__name-title"></h3>
+        <button class="photo-grid__heart" type="button" aria-label="Лайкнуть фотографию"></button>
+      </div>
+    </article>
+  </template>
+  <script src="./scripts/mesto.js"></script>
 </body>

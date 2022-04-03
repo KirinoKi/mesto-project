@@ -30,6 +30,13 @@
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
 @import url(../blocks/opacity/opacity.css);
-
-/*Раскоментируйте правило, чтобы открыть попап*/
-/*@import url(../blocks/popup/_opened/popup_opened.css);*/
+@import url(../blocks/popup/_opened/popup_opened.css);
+@import url(../blocks/photo-grid/__template/photo-grid__template.css);
+@import url(../blocks/photo-grid/__delete/photo-grid__delete.css);
+@import url(../blocks/photo-grid/__heart/photo-grid__heart_active.css);
+@import url(../blocks/photo-grid/__image/photo-grid__image.css);
+@import url(../blocks/popup/__caption/popup__caption.css);
+@import url(../blocks/popup/__card/popup__card.css);
+@import url(../blocks/popup/__content/popup__content.css);
+@import url(../blocks/popup/__image/popup__image.css);
+@import url(../blocks/popup/__close-card/popup__close-card.css);
