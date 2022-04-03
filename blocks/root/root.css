@@ -1,9 +1,4 @@
 .root {
-    min-width: 320px;
-    max-width: 1280px;
-    padding-left: 200px;
-    padding-right: 200px;
-    margin: 0 auto;
     background-color: #000000;
     font-family: "Inter", "Arial", "Helvetica", sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -15,34 +10,34 @@
   
 @media (max-width: 1180px) {
     .root {
-        padding-left: 170px;
-        padding-right: 170px;
+        margin-left: 170px;
+        margin-right: 170px;
     }
 }
 
 @media (max-width: 1080px) {
     .root {
-        padding-left: 130px;
-        padding-right: 130px;
+        margin-left: 130px;
+        margin-right: 130px;
     }
 }
 
 @media (max-width: 880px) {
     .root {
-        padding-left: 70px;
-        padding-right: 70px;
+        margin-left: 70px;
+        margin-right: 70px;
     }
 }
 
 @media (max-width: 768px) {
     .root {
-        padding-left: 40px;
-        padding-right: 40px;
+        margin-left: 40px;
+        margin-right: 40px;
     }
 }
 
 @media (max-width: 420px) {
     .root {
-        padding: 0;
+        margin: 0;
     }
 }

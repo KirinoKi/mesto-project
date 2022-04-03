@@ -5,10 +5,6 @@
     border-radius: 10px 10px 0px 0px;
 }
 
-.photo-grid__item:hover {
-    cursor: pointer;
-}
-  
 @media (max-width: 1243px) {
     .photo-grid__item {
         height: 342px;
