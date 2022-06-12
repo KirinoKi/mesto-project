@@ -4,19 +4,18 @@
 <head>
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <link rel='stylesheet' href='./pages/index.css'>
 
   <title>Место</title>
 </head>
 
 <body class='root'>
   <header class='header'>
-    <img src='./images/logo-1.svg' alt='Лого' class='header__logo logo' />
+    <img src="<%=require('./images/logo-1.svg')%>" alt='Лого' class='header__logo logo' />
   </header>
   <main class="content">
     <section class="lead">
       <div class="lead__titles">
-        <img class="lead__image" src="./images/image-4.jpg" alt="Ваш аватар" />
+        <img class="lead__image" src="<%=require('./images/image-4.jpg')%>" alt="Ваш аватар" />
         <div class="lead__wrapper-titles">
           <div class="lead__wrapper-title">
             <h1 class="lead__title">Жак-Ив Кусто</h1>
@@ -36,32 +35,44 @@
   </footer>
   <div class="popup popup__edit">
     <div class="popup__container">
-      <button class="popup__close-cross"></button>
+      <button class="popup__close-cross" name="popupCloseEdit"></button>
       <h3 class="popup__title">Редактировать профиль</h3>
-      <form action="#" class="popup__inputs popup__profile" name="editPopup">
-        <input type="text" class="popup__input-text popup__input-name" name="userName" placeholder="Ваше имя">
-        <input type="text" class="popup__input-text popup__input-subname" name="userOccupation"
-          placeholder="Ваш род деятельности">
-        <button type="submit" class="popup__submit">Сохранить</button>
+      <form action="#" class="popup__inputs popup__profile" name="editPopup" novalidate>
+        <div class='popup__field'>
+        <input type="text" class="popup__input-text popup__input-name" name="userName" id='userName' placeholder="Ваше имя" minlength="2" maxlength="40" required>
+        <span class="userName-error form__input-error"></span>
+        </div>
+        <div class='popup__field'>
+        <input type="text" class="popup__input-text popup__input-subname" name="userOccupation" id="userOccupation"
+          placeholder="Ваш род деятельности" minlength="2" maxlength="200" required>
+          <span class="userOccupation-error form__input-error"></span>
+          </div>
+        <button type="submit" class="popup__submit" name="edit-button">Сохранить</button>
       </form>
     </div>
   </div>
   <div class="popup popup__add">
     <div class="popup__container">
-      <button class="popup__close-cross"></button>
+      <button class="popup__close-cross" name="popupCloseAdd"></button>
       <h3 class="popup__title">Новое место</h3>
-      <form action="#" class="popup__inputs popup__photo-grid" name="editPopup">
-        <input type="text" class="popup__input-text popup__input-title" name="userName" placeholder="Название">
-        <input type="text" class="popup__input-text popup__input-link" name="userOccupation"
-          placeholder="Ссылка на картинку">
-        <button type="submit" class="popup__submit popup__submit-place">Создать</button>
+      <form action="#" class="popup__inputs popup__photo-grid" name="addPopup" id="addPopup" novalidate>
+        <div class='popup__field'>
+        <input type="text" class="popup__input-text popup__input-title" name="placeName" id="placeName" placeholder="Название" minlength="2" maxlength="30" required>
+        <span class="placeName-error form__input-error"></span>
+        </div>
+        <div class='popup__field'>
+        <input type="url" class="popup__input-text popup__input-link" name="placeLink" id="placeLink"
+          placeholder="Ссылка на картинку" required>
+          <span class="placeLink-error form__input-error"></span>
+          </div>
+        <button type="submit" class="popup__submit popup__submit-place" name="place-button">Создать</button>
       </form>
     </div>
   </div>
   <div class="popup popup__card">
     <div class="popup__content">
       <img src="" alt="" class="popup__image">
-      <button class="popup__close-cross popup__close-card" type="button" aria-label="Закрыть"></button>
+      <button class="popup__close-cross popup__close-card" type="button" aria-label="Закрыть" name="popupCloseCard"></button>
       <h3 class="popup__caption"></h3>
     </div>
   </div>
@@ -77,5 +88,4 @@
       </div>
     </article>
   </template>
-  <script src="./scripts/mesto.js"></script>
 </body>
