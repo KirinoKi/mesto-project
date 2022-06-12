@@ -1,23 +1,45 @@
-import { addCard, initialCards } from "./cards.js";
-import { openPopup, closePopup } from "./utils.js";
+import { addCard } from "./cards.js";
+import { addPlacePopup, profilePopup } from "./utils.js";
 import { enableValidation } from "./validate.js";
-import { editProfile, submitProfileEdition, submitPlaceAdding } from "./modale.js";
+import { openPopup, closePopup } from "./modale.js";
 import '../pages/index.css';
 
-const root = document.querySelector(`.root`),
-      profilePopup = root.querySelector(`.popup__edit`),
-      addPlacePopup = root.querySelector(`.popup__add`),
-      imagePopup = root.querySelector(`.popup__card`),
-      editProfileForm = root.querySelector(`form[name='editPopup']`),
-      addPlaceForm = root.querySelector(`form[name='addPopup']`),
-      editProfileBtn = root.querySelector(`.lead__pencil`),
-      addPlaceBtn = root.querySelector(`.lead__button`),
-      closeProfilePopupBtn = root.querySelector(`button[name='popupCloseEdit']`),
-      closeAddPopupBtn = root.querySelector(`button[name='popupCloseAdd']`),
-      closeImagePopupBtn = root.querySelector(`button[name='popupCloseCard']`),
-      closePopupBtns = Array.from(root.querySelectorAll(`.popup__close-cross`));
+const editProfileForm = document.querySelector(`form[name='editPopup']`),
+      addPlaceForm = document.querySelector(`form[name='addPopup']`),
+      editProfileBtn = document.querySelector(`.lead__pencil`),
+      addPlaceBtn = document.querySelector(`.lead__button`),
+      closeProfilePopupBtn = document.querySelector(`button[name='popupCloseEdit']`),
+      closeAddPopupBtn = document.querySelector(`button[name='popupCloseAdd']`),
+      closeImagePopupBtn = document.querySelector(`button[name='popupCloseCard']`),
+      closePopupBtns = Array.from(document.querySelectorAll(`.popup__close-cross`));
 
-export{ root, imagePopup, profilePopup, addPlacePopup };
+
+const initialCards = [
+  {
+    name: 'Архыз',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+  },
+  {
+    name: 'Челябинская область',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+  },
+  {
+    name: 'Иваново',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+  },
+  {
+    name: 'Камчатка',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+  },
+  {
+    name: 'Холмогорский район',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+  },
+  {
+    name: 'Байкал',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+  }
+  ];
 
 initialCards.forEach((item) => {
   addCard(item.name, item.link);
@@ -32,6 +54,48 @@ closePopupBtns.forEach( (btn) => {
   const popup = btn.closest('.popup');
   btn.addEventListener('click', () => closePopup(popup));
 });
+
+
+const inputName = document.querySelector(`input[name='userName']`),
+        inputJob= document.querySelector(`input[name='userOccupation']`), 
+        userName = document.querySelector(`.lead__title`),
+        userJob = document.querySelector(`.lead__subtitle`),
+        inputPlace = document.querySelector(`input[name='placeName']`),
+        inputLink= document.querySelector(`input[name='placeLink']`);
+  
+
+  function editProfile() {
+    inputName.value = userName.textContent;
+    inputJob.value = userJob.textContent;
+    openPopup(profilePopup)
+  };
+
+  function changeProfileName(nameValue, jobValue) {
+    userName.textContent = nameValue;
+    userJob.textContent = jobValue;
+  }
+
+  function submitProfileEdition (evt) {
+    const nameValue = inputName.value,
+          jobValue = inputJob.value;
+  evt.preventDefault(); 
+   changeProfileName(nameValue, jobValue)
+   closePopup(profilePopup)
+  };
+    
+  function submitPlaceAdding (evt) {
+    evt.preventDefault();
+    const placeValue = inputPlace.value,
+          submitButton = evt.target.querySelector('.popup__submit'),
+          linkValue = inputLink.value;
+    addCard(placeValue, linkValue);
+    closePopup(addPlacePopup)
+    evt.target.reset();
+    submitButton.classList.add('popup__submit_inactive');
+    submitButton.setAttribute('disabled', true);
+  };
+
+
 
 enableValidation({
   popupSelector:'.popup',

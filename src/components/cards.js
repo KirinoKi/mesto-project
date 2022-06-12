@@ -1,32 +1,5 @@
-import { imagePopup } from './index.js'
-import { openPopup } from './utils.js';
-
-const initialCards = [
-  {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-  },
-  {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-  },
-  {
-    name: 'Иваново',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-  },
-  {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
-  ];
+import { imagePopup } from './utils.js'
+import { openPopup } from './modale.js';
 
 const photoCardTemplate = document.querySelector(`#template`).content;
 const photoCards = document.querySelector(`.photo-grid`);
@@ -67,4 +40,4 @@ function addCard(cardName, cardImage) {
   photoCards.prepend(photoCard);
 };
 
-export {addCard, initialCards};
+export { addCard };

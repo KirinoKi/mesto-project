@@ -1,43 +1,26 @@
-import { profilePopup, addPlacePopup } from "./index.js";
-import { openPopup, closePopup } from "./utils.js";
-import { addCard } from "./cards.js";
-  
-  const inputName = document.querySelector(`input[name='userName']`),
-        inputJob= document.querySelector(`input[name='userOccupation']`), 
-        userName = document.querySelector(`.lead__title`),
-        userJob = document.querySelector(`.lead__subtitle`),
-        inputPlace = document.querySelector(`input[name='placeName']`),
-        inputLink= document.querySelector(`input[name='placeLink']`);
-  
-  function editProfile() {
-    inputName.value = userName.textContent;
-    inputJob.value = userJob.textContent;
-    openPopup(profilePopup)
-  };
 
-  function changeProfileName(nameValue, jobValue) {
-    userName.textContent = nameValue;
-    userJob.textContent = jobValue;
+function openPopup(popup) {
+  popup.classList.add(`popup_opened`);
+  popup.addEventListener('mousedown', closePopupWithMouse);
+  document.addEventListener('keydown', closePopupWithEsc);
+};
+  
+function closePopup(popup){
+  popup.classList.remove(`popup_opened`);
+  popup.removeEventListener('mousedown', closePopupWithMouse);
+  document.removeEventListener('keydown', closePopupWithEsc);
+};
+  
+function closePopupWithMouse(evt) {
+  if(evt.target.classList.contains('popup_opened')) {
+    closePopup(evt.target);
   }
-
-  function submitProfileEdition (evt) {
-    const nameValue = inputName.value,
-          jobValue = inputJob.value;
-  evt.preventDefault(); 
-   changeProfileName(nameValue, jobValue)
-   closePopup(profilePopup)
+};
+  
+function closePopupWithEsc(evt) {
+  if(evt.key === 'Escape') {
+    closePopup(document.querySelector('.popup_opened'));
   };
-    
-  function submitPlaceAdding (evt) {
-    evt.preventDefault();
-    const placeValue = inputPlace.value,
-          submitButton = evt.target.querySelector('.popup__submit'),
-          linkValue = inputLink.value;
-    addCard(placeValue, linkValue);
-    closePopup(addPlacePopup)
-    evt.target.reset();
-    submitButton.classList.add('popup__submit_inactive');
-    submitButton.setAttribute('disabled', true);
-  };
+};
 
-export { editProfile, submitProfileEdition, submitPlaceAdding };
+export { openPopup, closePopup };
