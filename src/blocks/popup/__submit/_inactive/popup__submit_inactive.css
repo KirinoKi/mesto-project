@@ -2,7 +2,7 @@
     opacity: 0.2;
     background-color: transparent;
     color: #000;
-    border-color: #000;
+    border: 1px solid #000;
   }
   
   .popup__submit_inactive:hover {

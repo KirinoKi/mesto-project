@@ -3,12 +3,12 @@ import { openPopup } from './utils.js';
 
 const initialCards = [
   {
-    name: 'Санкт-Петербург',
-    link: 'https://images.pexels.com/photos/1606876/pexels-photo-1606876.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+    name: 'Архыз',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
   },
   {
-    name: 'Выборг',
-    link: 'https://images.pexels.com/photos/8994594/pexels-photo-8994594.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+    name: 'Челябинская область',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
   },
   {
     name: 'Иваново',
@@ -27,7 +27,7 @@ const initialCards = [
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
   }
   ];
-/*------ Массив стартовых объектов галереи -------- */
+
 const photoCardTemplate = document.querySelector(`#template`).content;
 const photoCards = document.querySelector(`.photo-grid`);
 const popupImage = document.querySelector(`.popup__image`);
