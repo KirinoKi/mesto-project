@@ -5,14 +5,15 @@
     border-radius: 10px 10px 0px 0px;
 }
 
+.photo-grid__item:hover {
+    opacity: 0.8;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border: none;
+}
+
 @media (max-width: 1243px) {
     .photo-grid__item {
         height: 342px;
-    }
-}
-  
-@media (max-width: 490px) {
-    .photo-grid__item {
-        height: 282px;
     }
 }

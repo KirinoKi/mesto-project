@@ -1,3 +1,10 @@
 .photo-grid__image {
     position: relative;
+    min-height: 282px;
+}
+
+@media (max-width: 1243px) {
+    .photo-grid__image {
+        height: 342px;
+    }
 }
