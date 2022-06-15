@@ -30,7 +30,7 @@
 .footer__copyright{color:#545454;font-size:18px;font-weight:400;line-height:22px;margin:0}@media (max-width:450px){.footer__copyright{font-size:14px;line-height:17px}}
 .opacity:hover{cursor:pointer;opacity:.6;transition-duration:.5s}
 .popup_opened{opacity:1;transition:visibility 0,5s,opacity .4s linear;visibility:visible}
-.photo-grid__delete{background-color:transparent;background-image:url(cfad6abab6254469198b.svg);background-position:50%;background-size:cover;border:none;margin:0;min-height:20px;min-width:20px;padding:0;position:absolute;right:18px;top:16px;visibility:hidden}.photo-grid__delete:hover{border:none;cursor:pointer;opacity:.5;transition-duration:.5s}
+.photo-grid__delete{background-color:transparent;background-image:url(f14e40d25ea947a8ec1d.svg);background-position:50%;background-size:cover;border:none;margin:0;min-height:30px;min-width:30px;padding:0;position:absolute;right:10px;top:10px;visibility:hidden}.photo-grid__delete:hover{border:none;cursor:pointer;opacity:.5;transition-duration:.5s}
 .photo-grid__heart_active{background-image:url(ef9d91d2dc255b63c3f2.svg)}
 .photo-grid__image{min-height:282px;position:relative}@media (max-width:1243px){.photo-grid__image{height:342px}}
 .popup__caption{color:#fff;font-size:12px;font-weight:400;line-height:15px;margin-top:10px}
