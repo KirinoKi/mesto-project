@@ -15,7 +15,10 @@
   <main class="content">
     <section class="lead">
       <div class="lead__titles">
-        <img class="lead__image" src="<%=require('./images/image-4.jpg')%>" alt="Ваш аватар" />
+        <div class="lead__image-container">
+        <img class="lead__image" src="" alt="Ваш аватар" />
+        <div class="lead__image-overlay"></div>
+      </div>
         <div class="lead__wrapper-titles">
           <div class="lead__wrapper-title">
             <h1 class="lead__title">Жак-Ив Кусто</h1>
@@ -76,6 +79,19 @@
       <h3 class="popup__caption"></h3>
     </div>
   </div>
+  <div class="popup popup__avatar">
+    <div class="popup__container">
+        <h2 class="popup__title">Обновить аватар</h2>
+        <button class="popup__close-cross" type="button" name="popupCloseAvatar"></button>
+        <form class="popup__inputs popup__avatar" name="userAvatar" novalidate>
+                <div class="popup__field">
+                    <input type="url" name="avatar-link" class="popup__input-text popup__input-avatar" placeholder="Ссылка на картинку" id="avatarLink" required/>
+                    <span class="avatarLink-error form__input-error"></span>
+                </div>
+                <button type="submit" class="popup__submit popup__submit-avatar" name="avatar-button">Создать</button>
+        </form>
+    </div>
+  </div>
   <template id="template">
     <article class="photo-grid__card">
       <div class="photo-grid__image">
@@ -84,7 +100,10 @@
       </div>
       <div class="photo-grid__name">
         <h3 class="photo-grid__name-title"></h3>
+        <div class="photo-grid__heart-container">
         <button class="photo-grid__heart" type="button" aria-label="Лайк"></button>
+        <span class="photo-grid__likes"></span>
+      </div>
       </div>
     </article>
   </template>

@@ -1,0 +1,20 @@
+.lead__image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    opacity: 0;
+    transition: .3s ease-in-out;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url(../../../images/Edit-Button-1.svg);
+    background-repeat: no-repeat;
+    background-size: 26px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.lead__image-overlay:hover{
+    opacity: 1
+}

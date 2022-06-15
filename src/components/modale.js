@@ -1,3 +1,12 @@
+const userName = document.querySelector(`.lead__title`),
+userJob = document.querySelector(`.lead__subtitle`),
+userAvatar = document.querySelector('.lead__image');
+
+function renderUser(user){
+  userName.textContent = user.name;
+  userJob.textContent = user.about;
+  userAvatar.src = user.avatar;
+}
 
 function openPopup(popup) {
   popup.classList.add(`popup_opened`);
@@ -23,4 +32,4 @@ function closePopupWithEsc(evt) {
   };
 };
 
-export { openPopup, closePopup };
+export { openPopup, closePopup, renderUser, userName, userJob };
