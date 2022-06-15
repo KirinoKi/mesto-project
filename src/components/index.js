@@ -1,4 +1,4 @@
-import { createCards } from "./cards.js";
+import { createCards, addCard } from "./cards.js";
 import { addPlacePopup, profilePopup, avatarPopup} from "./utils.js";
 import { enableValidation } from "./validate.js";
 import { openPopup, closePopup, renderUser, userName, userJob } from "./modale.js";
@@ -49,11 +49,6 @@ const inputName = document.querySelector(`input[name='userName']`),
     inputJob.value = userJob.textContent;
     openPopup(profilePopup)
   };
-
-  function changeProfileName(nameValue, jobValue) {
-    userName.textContent = nameValue;
-    userJob.textContent = jobValue;
-  }
 
   function submitProfileEdition (evt) {
     evt.preventDefault(); 
@@ -121,9 +116,9 @@ const inputName = document.querySelector(`input[name='userName']`),
 
   function renderLoading(isLoading, submitButton){
     if(isLoading){
-     submitButton.value = "Создание..."
+     submitButton.textContent = "Сохранение..."
       } else {
-      submitButton.value = "Создать"
+      submitButton.textContent = "Сохранить"
     }
   }
 

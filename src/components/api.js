@@ -87,15 +87,4 @@ const config = {
   .then(checkResponse)
   }
   
-  const  getCardFromServe = () => {
-    return fetch(`${config.baseUrl}/cards`, {
-    method: 'GET',
-    headers: config.headers
-    .then(res => res.json())
-  .then((res) => {
-    console.log(res)
-  })
-  }
-)}
-  
-  export { getUserInfo, getInitialCards, changeProfileData, postCardOnServe, kickCardFromServe, loveTheCard, hateTheCard, changeUserAvatar, getCardFromServe }
+  export { getUserInfo, getInitialCards, changeProfileData, postCardOnServe, kickCardFromServe, loveTheCard, hateTheCard, changeUserAvatar }

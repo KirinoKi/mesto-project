@@ -2,7 +2,6 @@ import { imagePopup } from './utils.js'
 import { openPopup, userName } from './modale.js'
 import { loveTheCard, hateTheCard, kickCardFromServe } from './api.js';;
 
-const checkOwner = (likeElement) => likeElement.name === userName.textContent;
 
 const photoCardTemplate = document.querySelector(`#template`).content;
 const photoCards = document.querySelector(`.photo-grid`);
@@ -11,6 +10,7 @@ const popupCaption = document.querySelector(`.popup__caption`);
 
 function createCard(card, userID) {
 
+  const checkOwner = (likeElement) => likeElement.name === userID;
   const cardElement = photoCardTemplate.querySelector(`.photo-grid__card`).cloneNode(true);
   const photoCardImage = cardElement.querySelector(`.photo-grid__item`);
   const photoCardName = cardElement.querySelector(`.photo-grid__name-title`);

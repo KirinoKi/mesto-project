@@ -1,10 +1,10 @@
 .photo-grid__delete {
-  min-width: 20px;
-  min-height: 20px;
+  min-width: 30px;
+  min-height: 30px;
   position: absolute;
-  top: 16px;
-  right: 18px;
-  background-image: url(../../../images/seo-social-web-network-internet_262_icon-icons.com_61518.svg);
+  top: 10px;
+  right: 10px;
+  background-image: url(../../../images/delete-svgrepo-com.svg);
   background-position: center;
   background-size: cover;
   background-color: transparent;
