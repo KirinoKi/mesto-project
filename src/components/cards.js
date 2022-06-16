@@ -10,7 +10,7 @@ const popupCaption = document.querySelector(`.popup__caption`);
 
 function createCard(card, userID) {
 
-  const checkOwner = (likeElement) => likeElement.name === userID;
+  const checkOwner = (likeElement) => likeElement._id === userID;
   const cardElement = photoCardTemplate.querySelector(`.photo-grid__card`).cloneNode(true);
   const photoCardImage = cardElement.querySelector(`.photo-grid__item`);
   const photoCardName = cardElement.querySelector(`.photo-grid__name-title`);
